@@ -12,6 +12,15 @@ public class MenuValidator extends Validator {
     public static HashMap<RestaurantMenu, Integer> menuValidate(String menuInput) throws IllegalArgumentException {
         HashMap<RestaurantMenu, Integer> menuAndCount = new HashMap<>();
 
+        stockMenu(menuInput, menuAndCount);
+
+        checkMenuCountOverMax(menuAndCount);
+        checkContainsNonDrink(menuAndCount);
+
+        return menuAndCount;
+    }
+
+    private static void stockMenu(String menuInput, HashMap<RestaurantMenu, Integer> menuAndCount) {
         String[] userMenu = menuInput.split(",");
         for (String menu : userMenu) {
             String[] menuAndCountArray = menu.split("-");
@@ -23,11 +32,6 @@ public class MenuValidator extends Validator {
 
             menuAndCount.put(restaurantMenu, menuCount);
         }
-
-        checkMenuCountOverMax(menuAndCount);
-        checkContainsNonDrink(menuAndCount);
-
-        return menuAndCount;
     }
 
     private static void checkContainsNonDrink(HashMap<RestaurantMenu, Integer> menuAndCount) {
