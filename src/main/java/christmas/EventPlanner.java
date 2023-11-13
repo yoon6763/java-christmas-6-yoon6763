@@ -1,6 +1,9 @@
 package christmas;
 
+import christmas.models.RestaurantMenu;
 import christmas.view.InputView;
+
+import java.util.HashMap;
 
 public class EventPlanner {
 
@@ -8,6 +11,7 @@ public class EventPlanner {
 
     public void start() {
         int visitDate = inputView.inputVisitDate();
+        HashMap<RestaurantMenu, Integer> menu = inputView.inputMenu();
 
 
     }

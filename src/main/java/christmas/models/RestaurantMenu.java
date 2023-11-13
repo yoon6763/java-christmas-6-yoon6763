@@ -1,6 +1,6 @@
 package christmas.models;
 
-public enum Menu {
+public enum RestaurantMenu {
     /*
     <애피타이저>
     양송이수프(6,000), 타파스(5,500), 시저샐러드(8,000)
@@ -40,9 +40,21 @@ public enum Menu {
     final int price;
     final Category category;
 
-    Menu(String menuTitle, int price, Category category) {
+    RestaurantMenu(String menuTitle, int price, Category category) {
         this.menuTitle = menuTitle;
         this.price = price;
         this.category = category;
+    }
+
+    public String getMenuTitle() {
+        return menuTitle;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public Category getCategory() {
+        return category;
     }
 }
