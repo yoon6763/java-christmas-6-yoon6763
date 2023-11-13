@@ -46,7 +46,7 @@ public class Plan {
     }
 
     public int calcFinalPrice() {
-        return calcTotalPrice() - calcEventPrice();
+        return calcTotalPrice() - calcDiscountPrice();
     }
 
     public void addDiscount(Discount discount) {
