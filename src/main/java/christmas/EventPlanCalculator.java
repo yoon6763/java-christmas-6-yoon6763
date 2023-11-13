@@ -1,11 +1,11 @@
 package christmas;
 
-import christmas.eventpolicy.discount.DiscountConfig;
+import christmas.eventpolicy.DiscountConfig;
 import christmas.eventpolicy.discount.DiscountPolicy;
 import christmas.eventpolicy.gift.GiftPolicy;
 import christmas.models.Plan;
 import christmas.models.RestaurantMenu;
-import christmas.models.gift.GiftConfig;
+import christmas.eventpolicy.GiftConfig;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,4 +1,6 @@
-package christmas.eventpolicy.discount;
+package christmas.eventpolicy;
+
+import christmas.eventpolicy.discount.*;
 
 import java.util.List;
 

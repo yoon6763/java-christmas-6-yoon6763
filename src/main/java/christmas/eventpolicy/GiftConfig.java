@@ -1,4 +1,4 @@
-package christmas.models.gift;
+package christmas.eventpolicy;
 
 import christmas.eventpolicy.gift.ChampagneGiftPolicy;
 import christmas.eventpolicy.gift.GiftPolicy;
