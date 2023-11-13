@@ -1,5 +1,6 @@
 package christmas.valid;
 
+import christmas.models.Category;
 import christmas.models.RestaurantMenu;
 
 import java.util.HashMap;
@@ -24,13 +25,24 @@ public class MenuValidator extends Validator {
         }
 
         checkMenuCountOverMax(menuAndCount);
+        checkContainsNonDrink(menuAndCount);
 
         return menuAndCount;
     }
 
+    private static void checkContainsNonDrink(HashMap<RestaurantMenu, Integer> menuAndCount) {
+        for (RestaurantMenu menu : menuAndCount.keySet()) {
+            if (menu.getCategory() != Category.DRINK) {
+                return;
+            }
+        }
+
+        throw new IllegalArgumentException("[ERROR] 음료만 주문할 수 없습니다.");
+    }
+
     private static void checkMenuCountOverMax(HashMap<RestaurantMenu, Integer> menuAndCount) {
         int totalMenuCount = menuAndCount.values().stream().mapToInt(Integer::intValue).sum();
-        if(totalMenuCount > MAX_MENU_COUNT) {
+        if (totalMenuCount > MAX_MENU_COUNT) {
             throw new IllegalArgumentException("[ERROR] 메뉴는 최대 20개까지만 가능합니다.");
         }
     }
