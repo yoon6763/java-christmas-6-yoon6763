@@ -1,7 +1,7 @@
 package christmas.valid;
 
-import christmas.models.Category;
-import christmas.models.RestaurantMenu;
+import christmas.models.menu.Category;
+import christmas.models.menu.RestaurantMenu;
 
 import java.util.HashMap;
 

@@ -1,6 +1,6 @@
 package christmas.models.gift;
 
-import christmas.models.RestaurantMenu;
+import christmas.models.menu.RestaurantMenu;
 
 public class Gift {
     private final RestaurantMenu menu;

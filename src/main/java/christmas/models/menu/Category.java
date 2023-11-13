@@ -1,4 +1,4 @@
-package christmas.models;
+package christmas.models.menu;
 
 public enum Category {
     APPETIZER("애피타이저"),

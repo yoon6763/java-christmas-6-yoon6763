@@ -4,7 +4,7 @@ import christmas.eventpolicy.DiscountConfig;
 import christmas.eventpolicy.discount.DiscountPolicy;
 import christmas.eventpolicy.gift.GiftPolicy;
 import christmas.models.Plan;
-import christmas.models.RestaurantMenu;
+import christmas.models.menu.RestaurantMenu;
 import christmas.eventpolicy.GiftConfig;
 
 import java.util.HashMap;

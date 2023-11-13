@@ -2,6 +2,7 @@ package christmas.models;
 
 import christmas.models.discount.Discount;
 import christmas.models.gift.Gift;
+import christmas.models.menu.RestaurantMenu;
 
 import java.util.ArrayList;
 import java.util.HashMap;

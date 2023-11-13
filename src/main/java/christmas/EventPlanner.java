@@ -1,7 +1,7 @@
 package christmas;
 
 import christmas.models.Plan;
-import christmas.models.RestaurantMenu;
+import christmas.models.menu.RestaurantMenu;
 import christmas.view.InputView;
 
 import java.util.HashMap;

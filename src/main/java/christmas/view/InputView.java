@@ -1,7 +1,7 @@
 package christmas.view;
 
 import camp.nextstep.edu.missionutils.Console;
-import christmas.models.RestaurantMenu;
+import christmas.models.menu.RestaurantMenu;
 import christmas.valid.MenuValidator;
 import christmas.valid.VisitValidator;
 

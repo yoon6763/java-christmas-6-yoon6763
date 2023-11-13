@@ -1,7 +1,7 @@
 package christmas.eventpolicy.discount;
 
-import christmas.models.Category;
-import christmas.models.RestaurantMenu;
+import christmas.models.menu.Category;
+import christmas.models.menu.RestaurantMenu;
 import christmas.models.discount.Discount;
 import christmas.models.discount.DiscountType;
 import christmas.utils.EventDate;

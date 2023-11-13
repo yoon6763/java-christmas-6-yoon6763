@@ -1,4 +1,6 @@
-package christmas.models;
+package christmas.models.menu;
+
+import christmas.models.menu.Category;
 
 public enum RestaurantMenu {
     /*
