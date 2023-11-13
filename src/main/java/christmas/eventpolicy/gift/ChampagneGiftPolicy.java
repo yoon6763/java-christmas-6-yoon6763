@@ -1,9 +1,7 @@
-package christmas.event.gift;
+package christmas.eventpolicy.gift;
 
 import christmas.models.RestaurantMenu;
-import christmas.models.discount.Discount;
 import christmas.models.gift.Gift;
-import christmas.models.gift.GiftType;
 
 import java.util.HashMap;
 import java.util.Optional;
@@ -20,7 +18,7 @@ public class ChampagneGiftPolicy implements GiftPolicy {
             return Optional.empty();
         }
 
-        return Optional.of(new Gift(GiftType.CHAMPAGNE, 1));
+        return Optional.of(new Gift(RestaurantMenu.CHAMPAGNE, 1));
     }
 
     private static int getTotalPrice(HashMap<RestaurantMenu, Integer> menuResult) {

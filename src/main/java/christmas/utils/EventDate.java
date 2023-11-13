@@ -4,8 +4,11 @@ import java.time.LocalDate;
 
 public class EventDate {
 
+    private final static int YEAR = 2023;
+    private final static int MONTH = 12;
+
     private static LocalDate getDate(int visitedDate) {
-        return LocalDate.of(2023, 12, visitedDate);
+        return LocalDate.of(YEAR, MONTH, visitedDate);
     }
 
     public static boolean isWeekend(int visitedDate) {

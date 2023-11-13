@@ -1,4 +1,4 @@
-package christmas.event.discount;
+package christmas.eventpolicy.discount;
 
 import christmas.models.RestaurantMenu;
 import christmas.models.discount.Discount;

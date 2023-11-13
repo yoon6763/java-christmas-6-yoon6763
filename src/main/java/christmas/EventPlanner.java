@@ -18,6 +18,5 @@ public class EventPlanner {
         Plan plan = eventPlanCalculator.calculate(menu, visitDate);
 
 
-
     }
 }

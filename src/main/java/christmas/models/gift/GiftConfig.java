@@ -1,7 +1,7 @@
 package christmas.models.gift;
 
-import christmas.event.gift.ChampagneGiftPolicy;
-import christmas.event.gift.GiftPolicy;
+import christmas.eventpolicy.gift.ChampagneGiftPolicy;
+import christmas.eventpolicy.gift.GiftPolicy;
 
 import java.util.List;
 

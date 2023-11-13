@@ -1,16 +1,18 @@
 package christmas.models.gift;
 
+import christmas.models.RestaurantMenu;
+
 public class Gift {
-    private final GiftType giftType;
+    private final RestaurantMenu menu;
     private final int giftCount;
 
-    public Gift(GiftType giftType, int giftCount) {
-        this.giftType = giftType;
+    public Gift(RestaurantMenu menu, int giftCount) {
+        this.menu = menu;
         this.giftCount = giftCount;
     }
 
-    public GiftType getGiftType() {
-        return giftType;
+    public RestaurantMenu getMenu() {
+        return menu;
     }
 
     public int getGiftCount() {

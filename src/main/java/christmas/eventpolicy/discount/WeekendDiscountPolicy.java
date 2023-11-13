@@ -1,4 +1,4 @@
-package christmas.event.discount;
+package christmas.eventpolicy.discount;
 
 import christmas.models.Category;
 import christmas.models.RestaurantMenu;
@@ -10,13 +10,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-public class WeekdayDiscountPolicy implements DiscountPolicy {
+public class WeekendDiscountPolicy implements DiscountPolicy {
 
-    private static final int WEEKDAY_DISCOUNT_PRICE = 2023;
+    private static final int WEEKEND_DISCOUNT_PRICE = 2023;
 
     @Override
     public Optional<Discount> applyDiscount(HashMap<RestaurantMenu, Integer> menuResult, int visitDate) {
-        if (!EventDate.isWeekday(visitDate)) {
+        if (!EventDate.isWeekend(visitDate)) {
             return Optional.empty();
         }
 
@@ -26,17 +26,17 @@ public class WeekdayDiscountPolicy implements DiscountPolicy {
             return Optional.empty();
         }
 
-        return Optional.of(new Discount(DiscountType.WEEKDAY_DISCOUNT, amount * WEEKDAY_DISCOUNT_PRICE));
+        return Optional.of(new Discount(DiscountType.WEEKEND_DISCOUNT, amount * WEEKEND_DISCOUNT_PRICE));
     }
 
-    private int calcDiscount(HashMap<RestaurantMenu, Integer> menuResult) {
+    private static int calcDiscount(HashMap<RestaurantMenu, Integer> menuResult) {
         int amount = 0;
 
         for (Map.Entry<RestaurantMenu, Integer> entry : menuResult.entrySet()) {
             RestaurantMenu menu = entry.getKey();
             int count = entry.getValue();
 
-            if (menu.getCategory() == Category.DESSERT) {
+            if (menu.getCategory() == Category.MAIN) {
                 amount += count;
             }
         }

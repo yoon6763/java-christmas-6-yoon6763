@@ -1,8 +1,8 @@
 package christmas;
 
-import christmas.event.discount.DiscountConfig;
-import christmas.event.discount.DiscountPolicy;
-import christmas.event.gift.GiftPolicy;
+import christmas.eventpolicy.discount.DiscountConfig;
+import christmas.eventpolicy.discount.DiscountPolicy;
+import christmas.eventpolicy.gift.GiftPolicy;
 import christmas.models.Plan;
 import christmas.models.RestaurantMenu;
 import christmas.models.gift.GiftConfig;
