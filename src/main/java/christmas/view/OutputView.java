@@ -53,6 +53,13 @@ public class OutputView {
 
     public void printDiscountContentMessage(List<Discount> discounts, List<Gift> gifts) {
         System.out.println(DISCOUNT_CONTENT_MESSAGE);
+
+        if (discounts.isEmpty() && gifts.isEmpty()) {
+            System.out.println("없음");
+            printEmptyLine();
+            return;
+        }
+
         for (Discount discount : discounts) {
             System.out.println(discount.getDiscountType().getName() + ": -" + moneyFormat(discount.getDiscountPrice()) + "원");
         }
