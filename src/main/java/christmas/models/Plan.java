@@ -13,11 +13,9 @@ public class Plan {
     private final HashMap<RestaurantMenu, Integer> menu;
     private final List<Discount> discounts = new ArrayList<>();
     private final List<Gift> gifts = new ArrayList<>();
-    private final Badge badge;
 
     public Plan(HashMap<RestaurantMenu, Integer> menu) {
         this.menu = menu;
-        this.badge = Badge.of(calcEventPrice());
     }
 
     public int calcTotalPrice() {
@@ -70,6 +68,6 @@ public class Plan {
     }
 
     public Badge getBadge() {
-        return badge;
+        return Badge.of(calcEventPrice());
     }
 }
