@@ -27,7 +27,7 @@ public class EventPlanner {
         outputView.printOrderMenuMessage(plan.getMenu());
         outputView.printBeforeDiscountMessage(plan.calcTotalPrice());
         outputView.printGiftMenuMessage(plan.getGifts());
-        outputView.printDiscountContentMessage(plan.getDiscounts());
+        outputView.printDiscountContentMessage(plan.getDiscounts(), plan.getGifts());
         outputView.printAllEventPriceMessage(plan.calcEventPrice());
         outputView.printAfterDiscountMessage(plan.calcFinalPrice());
         outputView.printEventBadgeMessage(plan.getBadge());

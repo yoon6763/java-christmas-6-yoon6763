@@ -51,10 +51,14 @@ public class OutputView {
         printEmptyLine();
     }
 
-    public void printDiscountContentMessage(List<Discount> discounts) {
+    public void printDiscountContentMessage(List<Discount> discounts, List<Gift> gifts) {
         System.out.println(DISCOUNT_CONTENT_MESSAGE);
         for (Discount discount : discounts) {
             System.out.println(discount.getDiscountType().getName() + ": -" + moneyFormat(discount.getDiscountPrice()) + "원");
+        }
+
+        for (Gift gift : gifts) {
+            System.out.println("증정 이벤트: -" + moneyFormat(gift.getMenu().getPrice()) + "원");
         }
         printEmptyLine();
     }
