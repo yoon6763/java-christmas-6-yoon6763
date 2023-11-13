@@ -6,6 +6,8 @@ import java.util.HashMap;
 
 public class MenuValidator extends Validator {
 
+    private final static int MAX_MENU_COUNT = 20;
+
     public static HashMap<RestaurantMenu, Integer> menuValidate(String menuInput) throws IllegalArgumentException {
         HashMap<RestaurantMenu, Integer> menuAndCount = new HashMap<>();
 
@@ -21,7 +23,16 @@ public class MenuValidator extends Validator {
             menuAndCount.put(restaurantMenu, menuCount);
         }
 
+        checkMenuCountOverMax(menuAndCount);
+
         return menuAndCount;
+    }
+
+    private static void checkMenuCountOverMax(HashMap<RestaurantMenu, Integer> menuAndCount) {
+        int totalMenuCount = menuAndCount.values().stream().mapToInt(Integer::intValue).sum();
+        if(totalMenuCount > MAX_MENU_COUNT) {
+            throw new IllegalArgumentException("[ERROR] 메뉴는 최대 20개까지만 가능합니다.");
+        }
     }
 
     private static void checkDuplicatedMenu(HashMap<RestaurantMenu, Integer> menuAndCount, RestaurantMenu restaurantMenu) {
