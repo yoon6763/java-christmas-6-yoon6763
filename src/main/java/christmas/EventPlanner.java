@@ -19,7 +19,17 @@ public class EventPlanner {
 
         Plan plan = eventPlanCalculator.calculate(menu, visitDate);
 
+        printPlan(plan, visitDate);
+    }
 
-
+    private void printPlan(Plan plan, int visitDate) {
+        outputView.printPreviewMessage(visitDate);
+        outputView.printOrderMenuMessage(plan.getMenu());
+        outputView.printBeforeDiscountMessage(plan.calcTotalPrice());
+        outputView.printGiftMenuMessage(plan.getGifts());
+        outputView.printDiscountContentMessage(plan.getDiscounts());
+        outputView.printAllEventPriceMessage(plan.calcEventPrice());
+        outputView.printAfterDiscountMessage(plan.calcFinalPrice());
+        outputView.printEventBadgeMessage(plan.getBadge());
     }
 }
