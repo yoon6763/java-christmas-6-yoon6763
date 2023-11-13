@@ -3,12 +3,14 @@ package christmas;
 import christmas.models.Plan;
 import christmas.models.menu.RestaurantMenu;
 import christmas.view.InputView;
+import christmas.view.OutputView;
 
 import java.util.HashMap;
 
 public class EventPlanner {
 
     private final InputView inputView = new InputView();
+    private final OutputView outputView = new OutputView();
     private final EventPlanCalculator eventPlanCalculator = new EventPlanCalculator();
 
     public void start() {
@@ -16,6 +18,7 @@ public class EventPlanner {
         HashMap<RestaurantMenu, Integer> menu = inputView.inputMenu();
 
         Plan plan = eventPlanCalculator.calculate(menu, visitDate);
+
 
 
     }
