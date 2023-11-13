@@ -15,13 +15,27 @@ public class InputView {
     private final static String INPUT_MENU_MESSAGE = "주문하실 메뉴를 메뉴와 개수를 알려 주세요. (e.g. 해산물파스타-2,레드와인-1,초코케이크-1)";
 
     public int inputVisitDate() {
-        System.out.println(INPUT_VISIT_DATE_MESSAGE);
-        String visitDay = Console.readLine();
-        return VisitValidator.validateVisitDate(visitDay);
+        while (true) {
+            System.out.println(INPUT_VISIT_DATE_MESSAGE);
+
+            try {
+                String visitDay = Console.readLine();
+                return VisitValidator.validateVisitDate(visitDay);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     public HashMap<RestaurantMenu, Integer> inputMenu() {
-        System.out.println(INPUT_MENU_MESSAGE);
-        return MenuValidator.menuValidate(Console.readLine());
+        while (true) {
+            System.out.println(INPUT_MENU_MESSAGE);
+
+            try {
+                return MenuValidator.menuValidate(Console.readLine());
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 }
