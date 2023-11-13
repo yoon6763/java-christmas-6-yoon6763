@@ -1,6 +1,5 @@
 package christmas.event.discount;
 
-import christmas.models.MenuResult;
 import christmas.models.RestaurantMenu;
 import christmas.models.discount.Discount;
 
